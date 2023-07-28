@@ -9,7 +9,13 @@ const port = 3000
 
 
 app.get("/", (req,res)=>{
-    
+    res.sendFile(_dirname+ "/index.html")
+})
+
+app.use(bodyparser.urlencoded({extended: true}))
+
+app.post("/submit", (req,res)=>{
+    req.body
 })
 
 app.listen(port, ()=>{
